@@ -12,7 +12,7 @@ import java.util.ArrayList;
 •	Emiliano Monroy Cruz
 •	Andrés Guillermo Schafler Tenorio 
 
- * @author andre
+ * @author andres
  */
 public class main {
     
@@ -48,6 +48,6 @@ public class main {
         //System.out.println(cal1.calculaFinal("")); //Prueba con una cadena vacia (está comentada porque manda un arror de Coleccion Vacia y corta las demás pruebas)
         System.out.println(cal1.calculaFinal("3.1416-+5*(°3-4)")); //Prueba con una cadena con problemas sintácticos(dos operadores juntos)
         
-    } //8,23,*,3,+,2,-
-    //823,*,3,+,2,-
+    } 
+    
 }
