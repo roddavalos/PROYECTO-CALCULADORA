@@ -90,7 +90,7 @@ public class Calculadora {
                 res= 3;
                 break;
             }
-            default:
+            default ->
                 res=0;
         }
         return res;
