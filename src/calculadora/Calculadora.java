@@ -76,21 +76,28 @@ public class Calculadora {
     }
  
     private static int previo(String c) {
+        int res;
         switch (c) {
             case "+", "-" -> {
-                return 1;
+                res= 1;
+                break;
             }
             case "*", "/" -> {
-                return 2;
+                res= 2;
+                break;
             }
             case "^" -> {
-                return 3;
+                res= 3;
+                break;
             }
+            default:
+                res=0;
         }
-        return 0;
+        return res;
     }
 
     public static boolean revisaParentesis(String operacion){
+        boolean resp = true;
         PilaADT<Character> pila = new PilaA();
         for(int i=0; i<operacion.length(); i++){
             char c = operacion.charAt(i);
@@ -98,14 +105,18 @@ public class Calculadora {
                 pila.push(c);
             } else if (c == ')'){
                 if (pila.isEmpty())
-                    return false;
+                    resp= false;
                 char tope = pila.pop();
                 if(c == ')' && tope != '('){
-                    return false;
+                    resp= false;
                 }
             }            
         }
-        return pila.isEmpty();
+        if(pila.isEmpty())
+            resp = true;
+        else
+            resp= false;
+        return resp;
     } //(7*8)-3
     
     public static boolean revisa(String operacion){
@@ -130,6 +141,7 @@ public class Calculadora {
     }
     
     public static boolean pruebaParentesisSinOperador(String operacion){ 
+        boolean resp;
 //este metodo comprueba que el usuario no sustituya los parentesis por operadores
         int i= 0;
         boolean noOperador = true, sinError = true;
@@ -145,8 +157,10 @@ public class Calculadora {
             i++;
         }
         if(!noOperador) //signfica que si hay operador
-            return true;
-        return sinError;
+            resp =  true;
+        else
+            resp = false;
+        return resp;
     }
     
     
