@@ -18,6 +18,13 @@ public class main {
     
     public static void main(String[] args) throws Exception {
         Calculadora cal1 = new Calculadora();
+        System.out.println(Calculadora.revisaParentesis("(8*8.9)-35")); //Probamos que funcione el metodo que revisa parentesis con reales
+        System.out.println(Calculadora.revisaParentesis("")); //Prueba con la cadena vacia
+        try{
+            System.out.println(Calculadora.revisaParentesis(")546+2(")); //Prueba con parentesis al revés
+        }catch(Exception e){
+            System.out.println("Error: checa la sintaxis");
+        }
         System.out.println(cal1.revisaParentesis("(8*8.9)-35")); //Probamos que funcione el metodo que revisa parentesis con reales
         System.out.println(cal1.revisaParentesis("")); //Prueba con la cadena vacia
         System.out.println(cal1.revisaParentesis(")546+2(")); //Prueba con parentesis al revés
@@ -44,10 +51,23 @@ public class main {
         //Probamos el metodo final que recopila revisa,revisaParentesis,infiApost y evaluarPostfijo
         System.out.println(cal1.calculaFinal("3.1416+5*(°3-4)")); //Prueba con parentesis balanceados, reales y negativos
         System.out.println(cal1.calculaFinal("°3.1416+5*(3-4)")); //Prueba con reales negativos
-        System.out.println(cal1.calculaFinal("3.1416+5*°3-4)")); //Prueba con parentesis mal balanceados
-        //System.out.println(cal1.calculaFinal("")); //Prueba con una cadena vacia (está comentada porque manda un arror de Coleccion Vacia y corta las demás pruebas)
-        System.out.println(cal1.calculaFinal("3.1416-+5*(°3-4)")); //Prueba con una cadena con problemas sintácticos(dos operadores juntos)
         
+        try{
+            System.out.println(cal1.calculaFinal("3.1416+5*°3-4)")); //Prueba con parentesis mal balanceados
+        }catch(Exception e){
+            System.out.println("Error: checa la sintaxis");
+        }
+        try{
+            System.out.println(cal1.calculaFinal("")); //Prueba con una cadena vacia (está comentada porque manda un arror de Coleccion Vacia y corta las demás pruebas)
+        }catch(Exception e){
+            System.out.println("Error: checa la sintaxis");
+        }
+        try{
+            System.out.println(cal1.calculaFinal("3.1416-+5*(°3-4)")); //Prueba con una cadena con problemas sintácticos(dos operadores juntos)
+        }catch(Exception e){
+            System.out.println("Error: checa la sintaxis");
+        }
+
     } 
     
 }
