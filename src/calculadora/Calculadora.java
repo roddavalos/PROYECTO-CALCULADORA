@@ -11,7 +11,7 @@ import java.util.ArrayList;
 •	Emiliano Monroy Cruz
 •	Andrés Guillermo Schafler Tenorio 
 
- * @author andre
+ * @author andres
  */
 public class Calculadora {
     
