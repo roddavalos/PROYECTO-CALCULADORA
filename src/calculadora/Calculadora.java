@@ -92,7 +92,7 @@ public class Calculadora {
         return postfijo;
     }
  /**
- 
+ </li>Este método lo único que hace es asignarle valores a los operadores </li>
  */
  
     private static int previo(String c) {
@@ -115,7 +115,13 @@ public class Calculadora {
         }
         return res;
     }
-
+/**
+</li>Método que comprueba el balance de los paréntesis en la entrada</li>
+</li> Cada que encuentra un '(' lo mete en una pila y cada que encuentra un ')'</li>
+</li>elimina el objeto de la pila, de tal modo que el método será true </li>
+</li> si la pila está vacia y false si no lo está </li>
+*/
+ 
     public static boolean revisaParentesis(String operacion){
         boolean resp = true;
         PilaADT<Character> pila = new PilaA();
@@ -137,7 +143,11 @@ public class Calculadora {
         else
             resp= false;
         return resp;
-    } //(7*8)-3
+    } 
+ /**
+ </li>Este método va a revisar que las operaciones estén en orden correcto, no existan operadores juntos</li>
+ </li>Marcará errores de sintaxis</li>
+ */ 
     
     public static boolean revisa(String operacion){
         
@@ -159,6 +169,10 @@ public class Calculadora {
         
         return !aux && pruebaParentesisSinOperador(operacion);
     }
+ /**
+ </li>Se hizo este método para preveer el hechoq ue metieran una operación que no tuviera paréntesis</li>
+ </li>este método comprueba que el usuario no sustituya los parentesis por operadores </li>
+ */
     
     public static boolean pruebaParentesisSinOperador(String operacion){ 
         boolean resp;
@@ -182,6 +196,10 @@ public class Calculadora {
             resp = false;
         return resp;
     }
+ /**
+ </li>Se hizo este método, es la parte final</li>
+ </li>Evaluara la operación después de revisar su sintaxis y convertirla a postfijo</li>
+ */
     
     
     public static String evaluarPostfijo(ArrayList<String> postfijo) {
@@ -212,6 +230,10 @@ public class Calculadora {
         return Double.toString(pila.pop()); 
 // Al final de las operaciones necesarias, el resultado de la evaluación queda en el tope de la pila, así que lo desapilamos y lo retornamos.
     }
+ /**
+ </li>Se hizo este método en la parte final</li>
+ </li>Simplemente permite al usuario limpiar los numeros de las calculadoras</li>
+ */ 
 
     public void limpiar() { //este metodo limpia la pila, reiniciando la pila de operadores, el arreglo de Strings y el String auxiliar.
         pila = new PilaA();
