@@ -4,15 +4,25 @@
  */
 package calculadora;
 import java.util.ArrayList;
-/**
+
+//**
+ * <pre>
+ * @author 
  *•	Jorge Rodrigo Dávalos González Plata
 •	André Herrera Cataño 
 •	Aranza Ibarra Camarena 
 •	Emiliano Monroy Cruz
 •	Andrés Guillermo Schafler Tenorio 
+* 
+* Proyecto para la clase de Estrcuturas de Datos 
+* Crear una calculadora que:
+* Revise la SIntaxis
+* Cambie de notación infija a postfija 
+* Evalue 
 
- * @author andres
- */
+ * </pre>
+ *//
+ 
 public class Calculadora {
     
     private PilaA<Character> pila; //Pila para trabajar
