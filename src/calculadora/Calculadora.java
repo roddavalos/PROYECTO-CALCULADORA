@@ -35,7 +35,14 @@ public class Calculadora {
         postfija = new ArrayList<String>();
         auxiliar = "";
     }
+    /**
     
+    
+    </li>Método que cambia la notación de infija a Postfija </li>
+    </li>Utiliza un ArrayList y una Pila </li>
+    
+    
+    */
     
     
     public static ArrayList<String> infiApost(String operacion) {
@@ -84,6 +91,9 @@ public class Calculadora {
         
         return postfijo;
     }
+ /**
+ 
+ */
  
     private static int previo(String c) {
         int res;
