@@ -16,7 +16,7 @@ import java.util.ArrayList;
 * 
 * Proyecto para la clase de Estrcuturas de Datos 
 * Crear una calculadora que:
-* Revise la SIntaxis
+* Revise la Sintaxis
 * Cambie de notación infija a postfija 
 * Evalue 
 
